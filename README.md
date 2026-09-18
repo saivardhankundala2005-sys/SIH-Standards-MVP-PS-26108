@@ -1,17 +1,18 @@
 # AI-Powered Recommendation Engine for Indian Standards (SIH PS 26108)
 
-[![Smart India Hackathon](https://img.shields.io/badge/SIH-2024%2F2025-orange.svg)](https://www.sih.gov.in/)
+[![Smart India Hackathon 2026](https://img.shields.io/badge/SIH-2026-orange.svg)](https://www.sih.gov.in/)
 [![Problem Statement](https://img.shields.io/badge/Problem%20Statement-PS--26108-blue.svg)]()
 [![Team](https://img.shields.io/badge/Team-MindForge-brightgreen.svg)]()
 [![Ministry](https://img.shields.io/badge/Ministry-Dept.%20of%20Consumer%20Affairs-red.svg)](https://consumeraffairs.nic.in/)
 [![License](https://img.shields.io/badge/License-MIT-purple.svg)]()
 
-> **Smart India Hackathon Solution**  
+> **Smart India Hackathon (SIH) 2026 Solution**  
 > **Problem Statement ID:** PS 26108 / PS 108  
 > **Title:** Recommendation Engine for Identifying Applicable Indian Standards for Technical Procurement Specifications  
 > **Organization:** Department of Consumer Affairs (DoCA), Ministry of Consumer Affairs, Food & Public Distribution  
 > **Team Name:** **MindForge**  
 > **Repository:** [SIH-Standards-MVP-PS-26108](https://github.com/saivardhankundala2005-sys/SIH-Standards-MVP-PS-26108)
+
 
 ---
 
@@ -237,7 +238,7 @@ python -m ingestion.build_index --pdf_dir storage/pdfs/ --catalogue data/catalog
 ---
 
 ## 👥 Team MindForge
-Developed for **Smart India Hackathon (SIH)** under Problem Statement **PS-26108** for the **Department of Consumer Affairs (DoCA), Ministry of Consumer Affairs, Food & Public Distribution, Government of India**.
+Developed for **Smart India Hackathon (SIH) 2026** under Problem Statement **PS-26108** for the **Department of Consumer Affairs (DoCA), Ministry of Consumer Affairs, Food & Public Distribution, Government of India**.
 
 ---
-*Built with ❤️ by Team MindForge*
+*Built with ❤️ by Team MindForge for SIH 2026*

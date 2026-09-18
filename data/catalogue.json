@@ -1,0 +1,426 @@
+[
+  {
+    "is_number": "IS 694",
+    "title": "Polyvinyl Chloride (PVC) Insulated Cables for Working Voltages Up to and Including 1100 V",
+    "sector": "Electrical & Cables",
+    "year": "2010",
+    "status": "active",
+    "latest_amendment": "Amd 4 (2024)",
+    "description": "Covers requirements for PVC insulated cables for electric power and lighting for working voltages up to 1100V. Prescribes copper and aluminium conductor specifications, insulation thickness, sheath strength, flame retardancy tests, and electrical performance norms.",
+    "normative_references": ["IS 8130", "IS 5831", "IS 10810", "IS 4905"],
+    "certification_required": "BIS Product Certification (ISI Mark) - Mandatory under Electrical Wires/Cables Quality Control Order",
+    "source_url": "https://www.bis.gov.in/know-your-standard/",
+    "technical_parameters": [
+      {"parameter": "Rated Voltage (U0/U)", "prescribed_limit_range": "660 / 1100 V AC", "unit": "Volts", "safety_significance": "Maximum continuous operational phase-to-earth and phase-to-phase voltage"},
+      {"parameter": "Max Conductor Operating Temp", "prescribed_limit_range": "70", "unit": "°C", "safety_significance": "Thermal limit for continuous full-load operation"},
+      {"parameter": "Short-Circuit Temp Limit", "prescribed_limit_range": "160", "unit": "°C", "safety_significance": "Maximum allowable conductor temp during 5 sec short circuit"},
+      {"parameter": "High Voltage Dielectric Test", "prescribed_limit_range": "3000", "unit": "V AC for 5 min", "safety_significance": "Ensures zero insulation breakdown under overvoltage surge"},
+      {"parameter": "Insulation Resistance at 20°C", "prescribed_limit_range": "Min 1.0 x 10^11", "unit": "Ω·cm", "safety_significance": "Prevents electrical leakage currents and shock hazards"},
+      {"parameter": "Flame Retardancy (Oxygen Index)", "prescribed_limit_range": "Min 29%", "unit": "Oxygen Concentration", "safety_significance": "Prevents flame propagation during electrical fires"}
+    ]
+  },
+  {
+    "is_number": "IS 7098",
+    "title": "Crosslinked Polyethylene (XLPE) Insulated PVC Sheathed Cables - Part 1: For Working Voltages Up to and Including 1100 V",
+    "sector": "Electrical & Cables",
+    "year": "2015",
+    "status": "active",
+    "latest_amendment": "Amd 2 (2023)",
+    "description": "Specifies requirements for single, twin, three, four core XLPE insulated cables for electric supply. Higher temperature rating (90 deg C continuous) than standard PVC cables.",
+    "normative_references": ["IS 8130", "IS 5831", "IS 10810", "IS 10418"],
+    "certification_required": "BIS Product Certification (ISI Mark)",
+    "source_url": "https://www.bis.gov.in/know-your-standard/",
+    "technical_parameters": [
+      {"parameter": "Rated Voltage (U0/U)", "prescribed_limit_range": "1100 V (1.1 kV)", "unit": "Volts", "safety_significance": "Voltage rating for heavy industrial and underground distribution"},
+      {"parameter": "Max Continuous Conductor Temp", "prescribed_limit_range": "90", "unit": "°C", "safety_significance": "XLPE thermosetting insulation provides higher current rating than PVC"},
+      {"parameter": "Emergency Overload Temp", "prescribed_limit_range": "130", "unit": "°C", "safety_significance": "Short period overload threshold without permanent insulation damage"},
+      {"parameter": "Short-Circuit Conductor Temp", "prescribed_limit_range": "250", "unit": "°C (max 5 sec)", "safety_significance": "Thermal withstand strength during short-circuit faults"},
+      {"parameter": "Tensile Strength of XLPE", "prescribed_limit_range": "Min 12.5", "unit": "N/mm²", "safety_significance": "Mechanical strength of XLPE core under pulling stress"},
+      {"parameter": "Elongation at Break", "prescribed_limit_range": "Min 200%", "unit": "Percentage", "safety_significance": "Flexibility and resistance to cracking under thermal expansion"},
+      {"parameter": "High Voltage Water Immersion Test", "prescribed_limit_range": "3.0 kV AC for 5 min", "unit": "kV", "safety_significance": "Mandatory water immersion insulation withstand test"}
+    ]
+  },
+  {
+    "is_number": "IS 8130",
+    "title": "Conductors for Insulated Electric Cables and Flexible Cords",
+    "sector": "Electrical & Cables",
+    "year": "2013",
+    "status": "active",
+    "latest_amendment": "Amd 1 (2020)",
+    "description": "Standard specifies requirements for copper and aluminium conductors used in insulated cables and cords, including solid, stranded, flexible conductor resistance limits.",
+    "normative_references": ["IS 10810"],
+    "certification_required": "Normative Reference / Component Specification",
+    "source_url": "https://www.bis.gov.in/know-your-standard/",
+    "technical_parameters": [
+      {"parameter": "EC Grade Aluminium Purity", "prescribed_limit_range": "Min 99.5%", "unit": "Aluminium Purity", "safety_significance": "Electrical Grade aluminium for low resistance"},
+      {"parameter": "Copper Conductor Purity", "prescribed_limit_range": "Min 99.9%", "unit": "Copper Purity", "safety_significance": "High conductivity annealed electrolytic copper"},
+      {"parameter": "Max DC Conductor Resistance at 20°C (1.5 sq mm)", "prescribed_limit_range": "Max 12.1", "unit": "Ω/km", "safety_significance": "Prevents excessive I²R heating and voltage drop"},
+      {"parameter": "Max DC Conductor Resistance at 20°C (2.5 sq mm)", "prescribed_limit_range": "Max 7.41", "unit": "Ω/km", "safety_significance": "Upper electrical resistance threshold"}
+    ]
+  },
+  {
+    "is_number": "IS 5831",
+    "title": "PVC Insulation and Sheath of Electric Cables",
+    "sector": "Electrical & Cables",
+    "year": "1984",
+    "status": "active",
+    "latest_amendment": "Amd 3 (2021)",
+    "description": "Specifies physical and electrical properties of various grades of PVC compounds used for insulation and sheathing of electric cables.",
+    "normative_references": ["IS 10810"],
+    "certification_required": "Normative Component Standard",
+    "source_url": "https://www.bis.gov.in/know-your-standard/",
+    "technical_parameters": [
+      {"parameter": "Tensile Strength (Type Type A Insulation)", "prescribed_limit_range": "Min 12.5", "unit": "N/mm²", "safety_significance": "Sheath tear strength during cable pulling"},
+      {"parameter": "Elongation at Break", "prescribed_limit_range": "Min 150%", "unit": "Percentage", "safety_significance": "Ductility under bending radius limits"},
+      {"parameter": "Hot Deformation Test at 80°C", "prescribed_limit_range": "Max 50%", "unit": "Depth Deformation", "safety_significance": "Resistance to flattening under mechanical pressure"}
+    ]
+  },
+  {
+    "is_number": "IS 2062",
+    "title": "Hot Rolled Medium and High Tensile Structural Steel - Specification",
+    "sector": "Steel & Metallurgy",
+    "year": "2011",
+    "status": "active",
+    "latest_amendment": "Amd 3 (2024)",
+    "description": "Covers steel grades E250, E275, E300, E350, E410, E450, E550, E600, E650 for structural purposes in bridge construction, heavy building frameworks, and engineering structures.",
+    "normative_references": ["IS 1608", "IS 1599", "IS 8910", "IS 1852"],
+    "certification_required": "BIS Product Certification (ISI Mark) - Mandatory under Steel & Steel Products Quality Control Order",
+    "source_url": "https://www.bis.gov.in/know-your-standard/",
+    "technical_parameters": [
+      {"parameter": "Yield Stress (Re) Grade E250", "prescribed_limit_range": "Min 250", "unit": "MPa (N/mm²)", "safety_significance": "Minimum elastic load limit for structural members (thickness < 20mm)"},
+      {"parameter": "Tensile Strength (Rm) Grade E250", "prescribed_limit_range": "410 to 540", "unit": "MPa (N/mm²)", "safety_significance": "Ultimate load breaking stress range"},
+      {"parameter": "Elongation Percentage (Gauge 5.65√So)", "prescribed_limit_range": "Min 23%", "unit": "Percentage", "safety_significance": "Ductility to absorb seismic/dynamic loads"},
+      {"parameter": "Charpy V-Notch Impact Energy at 0°C (Grade BR)", "prescribed_limit_range": "Min 27", "unit": "Joules", "safety_significance": "Brittle fracture prevention in low temp structural applications"},
+      {"parameter": "Max Carbon Equivalent (CE)", "prescribed_limit_range": "Max 0.42%", "unit": "Chemical Composition", "safety_significance": "Weldability limit; prevents heat-affected zone cracking"}
+    ]
+  },
+  {
+    "is_number": "IS 1786",
+    "title": "High Strength Deformed Steel Bars and Wires for Concrete Reinforcement - Specification (TMT Bars)",
+    "sector": "Steel & Construction",
+    "year": "2008",
+    "status": "active",
+    "latest_amendment": "Amd 4 (2022)",
+    "description": "Covers requirements for thermo-mechanically treated (TMT) high strength deformed steel bars of grades Fe 415, Fe 500, Fe 550, Fe 600, Fe 500D, Fe 550D for reinforced concrete structures.",
+    "normative_references": ["IS 2062", "IS 1608", "IS 277"],
+    "certification_required": "BIS Product Certification (ISI Mark) - Mandatory under Steel Quality Control Order",
+    "source_url": "https://www.bis.gov.in/know-your-standard/",
+    "technical_parameters": [
+      {"parameter": "0.2% Proof Stress / Yield Stress (Re) Fe 500D", "prescribed_limit_range": "Min 500", "unit": "N/mm² (MPa)", "safety_significance": "Core structural yield strength threshold for seismic resistant RC design"},
+      {"parameter": "Tensile Strength (Rm) Fe 500D", "prescribed_limit_range": "Min 560", "unit": "N/mm² (MPa)", "safety_significance": "Ultimate tensile breaking stress limit"},
+      {"parameter": "Tensile / Yield Strength Ratio (Rm/Re)", "prescribed_limit_range": "Min 1.10", "unit": "Ratio", "safety_significance": "High Rm/Re ratio ensures high energy dissipation during earthquakes"},
+      {"parameter": "Total Elongation at Max Force (Agt)", "prescribed_limit_range": "Min 5.0%", "unit": "Percentage", "safety_significance": "Prevents catastrophic sudden brittle bar failure"},
+      {"parameter": "Total Elongation (Gauge Length 5.65√A)", "prescribed_limit_range": "Min 16.0%", "unit": "Percentage", "safety_significance": "Mandatory elongation requirement for Fe 500D grade"},
+      {"parameter": "Max Carbon Content (C)", "prescribed_limit_range": "Max 0.25%", "unit": "Percentage", "safety_significance": "Ensures site weldability without preheating"},
+      {"parameter": "Max Combined Sulfur + Phosphorus (S+P)", "prescribed_limit_range": "Max 0.105%", "unit": "Percentage", "safety_significance": "Prevents cold shortness and hot shortness in steel"}
+    ]
+  },
+  {
+    "is_number": "IS 456",
+    "title": "Plain and Reinforced Concrete - Code of Practice",
+    "sector": "Building Materials & Civil Engineering",
+    "year": "2000",
+    "status": "active",
+    "latest_amendment": "Amd 5 (2023)",
+    "description": "General structural code of practice for plain and reinforced concrete constructions. Prescribes design standards, concrete grade selection, reinforcement details, durability rules, and safety factors.",
+    "normative_references": ["IS 269", "IS 383", "IS 1786", "IS 10262", "IS 4926"],
+    "certification_required": "Code of Practice / Design Mandatory Standard",
+    "source_url": "https://www.bis.gov.in/know-your-standard/",
+    "technical_parameters": [
+      {"parameter": "Min Concrete Grade for Reinforced Concrete (RCC)", "prescribed_limit_range": "M 20", "unit": "N/mm² (28-day characteristic strength)", "safety_significance": "Minimum allowable structural concrete grade for RCC work"},
+      {"parameter": "Min Cement Content for Severe Exposure", "prescribed_limit_range": "Min 320", "unit": "kg/m³", "safety_significance": "Prevents carbonation and chemical attack on steel reinforcement"},
+      {"parameter": "Max Water-Cement Ratio (Severe Exposure)", "prescribed_limit_range": "Max 0.45", "unit": "Ratio", "safety_significance": "Controls concrete permeability and capillary voids"},
+      {"parameter": "Nominal Cover to Reinforcement (Beams)", "prescribed_limit_range": "Min 25 to 45", "unit": "mm", "safety_significance": "Protects steel bars from corrosion and fire breakdown"}
+    ]
+  },
+  {
+    "is_number": "IS 269",
+    "title": "Ordinary Portland Cement - Specification (33, 43 and 53 Grades)",
+    "sector": "Cement & Building Materials",
+    "year": "2015",
+    "status": "active",
+    "latest_amendment": "Amd 2 (2023)",
+    "description": "Specifies chemical and physical requirements for Ordinary Portland Cement (OPC) 33, 43, 53 grades, including compressive strength, setting time, fineness, and sound testing.",
+    "normative_references": ["IS 4031", "IS 4032", "IS 4905"],
+    "certification_required": "BIS Product Certification (ISI Mark) - Mandatory under Cement Quality Control Order",
+    "source_url": "https://www.bis.gov.in/know-your-standard/",
+    "technical_parameters": [
+      {"parameter": "28-Day Compressive Strength (Grade 53)", "prescribed_limit_range": "Min 53.0", "unit": "MPa (N/mm²)", "safety_significance": "Standard 28-day cube strength limit"},
+      {"parameter": "Initial Setting Time", "prescribed_limit_range": "Min 30", "unit": "Minutes", "safety_significance": "Allows adequate time for mixing, transport, and placement"},
+      {"parameter": "Final Setting Time", "prescribed_limit_range": "Max 600 (10 hrs)", "unit": "Minutes", "safety_significance": "Ensures complete hardening process"},
+      {"parameter": "Soundness (Le Chatelier Expansion)", "prescribed_limit_range": "Max 10", "unit": "mm", "safety_significance": "Prevents delayed volumetric expansion and cracking"},
+      {"parameter": "Fineness (Blaine Specific Surface)", "prescribed_limit_range": "Min 225", "unit": "m²/kg", "safety_significance": "Controls hydration rate and early strength gain"}
+    ]
+  },
+  {
+    "is_number": "IS 10262",
+    "title": "Concrete Mix Proportioning - Guidelines",
+    "sector": "Building Materials & Civil Engineering",
+    "year": "2019",
+    "status": "active",
+    "latest_amendment": "Amd 1 (2021)",
+    "description": "Provides guidelines for concrete mix design for ordinary, standard, and high-strength concrete mixes based on target compressive strength and workability.",
+    "normative_references": ["IS 456", "IS 383", "IS 269"],
+    "certification_required": "Guidelines Code of Practice",
+    "source_url": "https://www.bis.gov.in/know-your-standard/",
+    "technical_parameters": [
+      {"parameter": "Target Mean Strength (f'ck)", "prescribed_limit_range": "fck + 1.65 s", "unit": "N/mm²", "safety_significance": "Calculates design target strength based on standard deviation (s)"},
+      {"parameter": "Slump Range for Pumped Concrete", "prescribed_limit_range": "75 to 125", "unit": "mm", "safety_significance": "Workability range required for pipeline pumping"}
+    ]
+  },
+  {
+    "is_number": "IS 10500",
+    "title": "Drinking Water - Specification",
+    "sector": "Water & Sanitation",
+    "year": "2012",
+    "status": "active",
+    "latest_amendment": "Amd 2 (2021)",
+    "description": "Specifies acceptable limits and permissible limits in absence of alternate source for physical, chemical, bacteriological, toxic, and radiological parameters in drinking water supplies.",
+    "normative_references": ["IS 3025", "IS 1622"],
+    "certification_required": "Mandatory Standard for Municipal Water Supply and Bottled Water Plants",
+    "source_url": "https://www.bis.gov.in/know-your-standard/",
+    "technical_parameters": [
+      {"parameter": "pH Value Range", "prescribed_limit_range": "6.5 to 8.5", "unit": "pH Scale", "safety_significance": "Mandatory non-corrosive, non-alkaline range (No relaxation permissible)"},
+      {"parameter": "Total Dissolved Solids (TDS)", "prescribed_limit_range": "Acceptable: 500 | Permissible: 2000", "unit": "mg/L (ppm)", "safety_significance": "Salinity and mineral concentration threshold"},
+      {"parameter": "Turbidity", "prescribed_limit_range": "Acceptable: 1.0 | Permissible: 5.0", "unit": "NTU", "safety_significance": "Water clarity and suspended matter limit"},
+      {"parameter": "Total Hardness (as CaCO3)", "prescribed_limit_range": "Acceptable: 200 | Permissible: 600", "unit": "mg/L", "safety_significance": "Prevents pipe scaling and health issues"},
+      {"parameter": "Free Residual Chlorine", "prescribed_limit_range": "Min 0.2 (0.5 during epidemic)", "unit": "mg/L", "safety_significance": "Disinfection residual to prevent waterborne pathogen recontamination"},
+      {"parameter": "E. coli / Coliform Bacteria", "prescribed_limit_range": "0 (Shall not be detectable)", "unit": "CFU per 100 mL", "safety_significance": "Zero-tolerance microbiological safety limit"}
+    ]
+  },
+  {
+    "is_number": "IS 14543",
+    "title": "Packaged Drinking Water (Other than Packaged Natural Mineral Water) - Specification",
+    "sector": "Food & Water",
+    "year": "2024",
+    "status": "active",
+    "latest_amendment": "2024 Edition",
+    "description": "Prescribes requirements, methods of sampling and test for packaged drinking water filled in sealed plastic or glass containers for human consumption.",
+    "normative_references": ["IS 10500", "IS 3025", "IS 4905"],
+    "certification_required": "BIS Product Certification (ISI Mark) + FSSAI Licence mandatory",
+    "source_url": "https://www.bis.gov.in/know-your-standard/",
+    "technical_parameters": [
+      {"parameter": "TDS (Total Dissolved Solids)", "prescribed_limit_range": "75 to 500", "unit": "mg/L", "safety_significance": "Mineral level range in packaged bottled water"},
+      {"parameter": "Total Coliform & Faecal Streptococci", "prescribed_limit_range": "0 per 250 mL", "unit": "Count", "safety_significance": "Absolute microbiological sterility mandate"},
+      {"parameter": "Pesticide Residues (Individual)", "prescribed_limit_range": "Max 0.0001 (0.1 ppb)", "unit": "mg/L", "safety_significance": "Toxic agro-chemical chemical safety limit"}
+    ]
+  },
+  {
+    "is_number": "IS 4984",
+    "title": "High Density Polyethylene (HDPE) Pipes for Water Supply - Specification",
+    "sector": "Pipes & Water Distribution",
+    "year": "2016",
+    "status": "active",
+    "latest_amendment": "Amd 2 (2022)",
+    "description": "Covers requirements for HDPE pipes from 16 mm to 1000 mm diameter intended for conveyance of potable water, sewage, industrial effluents, and irrigation.",
+    "normative_references": ["IS 7328", "IS 2530", "IS 12235"],
+    "certification_required": "BIS Product Certification (ISI Mark)",
+    "source_url": "https://www.bis.gov.in/know-your-standard/",
+    "technical_parameters": [
+      {"parameter": "Melt Flow Rate (MFR) 190°C/5kg", "prescribed_limit_range": "0.2 to 1.1", "unit": "g/10 min", "safety_significance": "Raw PE 100 resin processability and density indicator"},
+      {"parameter": "Density of PE Material at 27°C", "prescribed_limit_range": "940.6 to 958.4", "unit": "kg/m³", "safety_significance": "Ensures high density polymer grade"},
+      {"parameter": "Hydrostatic Strength Test at 20°C (100 hrs)", "prescribed_limit_range": "12.4 (PE 100 grade)", "unit": "MPa Hoop Stress", "safety_significance": "Long term pressure burst resistance test"}
+    ]
+  },
+  {
+    "is_number": "IS 1239",
+    "title": "Steel Tubes, Tubulars and Other Wrought Steel Fittings - Part 1: Steel Tubes",
+    "sector": "Pipes & Mechanical Engineering",
+    "year": "2004",
+    "status": "active",
+    "latest_amendment": "Amd 5 (2023)",
+    "description": "Specifies requirements for welded and seamless steel tubes suitable for screwing to IS 554 thread or welding, for water, gas, steam, and air lines.",
+    "normative_references": ["IS 2062", "IS 4736", "IS 1608"],
+    "certification_required": "BIS Product Certification (ISI Mark)",
+    "source_url": "https://www.bis.gov.in/know-your-standard/",
+    "technical_parameters": [
+      {"parameter": "Hydrostatic Test Pressure", "prescribed_limit_range": "5.0", "unit": "MPa (50 bar)", "safety_significance": "Factory pressure proof test for leak-proof pipe seams"},
+      {"parameter": "Tensile Strength (ERW Steel Tubes)", "prescribed_limit_range": "Min 320", "unit": "N/mm² (MPa)", "safety_significance": "Minimum mechanical pipe wall strength"},
+      {"parameter": "Galvanizing Zinc Coating Mass", "prescribed_limit_range": "Min 360 to 400", "unit": "g/m²", "safety_significance": "Anti-corrosion galvanization layer thickness"}
+    ]
+  },
+  {
+    "is_number": "IS 303",
+    "title": "Plywood for General Purposes - Specification",
+    "sector": "Timber & Building Materials",
+    "year": "2024",
+    "status": "active",
+    "latest_amendment": "2024 Revision",
+    "description": "Covers requirements for moisture-resistant (MR) and boiling-water-resistant (BWR) grades of plywood made from suitable timbers, used for interior furniture, partition walls, and ceiling work.",
+    "normative_references": ["IS 1734", "IS 707", "IS 848"],
+    "certification_required": "BIS Product Certification (ISI Mark) - Mandatory under Wood Products Quality Control Order",
+    "source_url": "https://www.bis.gov.in/know-your-standard/",
+    "technical_parameters": [
+      {"parameter": "Moisture Content", "prescribed_limit_range": "5.0 to 15.0%", "unit": "Percentage", "safety_significance": "Prevents warping, shrinkage, and fungal attack"},
+      {"parameter": "Glue Shear Strength (Dry State)", "prescribed_limit_range": "Min 1350", "unit": "N", "safety_significance": "Inter-ply adhesive bond strength"},
+      {"parameter": "Boiling Water Resistance (BWR 8-Hour Test)", "prescribed_limit_range": "No delamination allowed", "unit": "Visual / Mechanical Test", "safety_significance": "Adhesive stability in hot water humid environments"},
+      {"parameter": "Tensile Strength (Along Grain)", "prescribed_limit_range": "Min 42.0", "unit": "N/mm²", "safety_significance": "Structural load capacity of plywood sheets"}
+    ]
+  },
+  {
+    "is_number": "IS 710",
+    "title": "Marine Plywood - Specification",
+    "sector": "Timber & Building Materials",
+    "year": "2010",
+    "status": "active",
+    "latest_amendment": "Amd 3 (2023)",
+    "description": "Specifies requirements for boiling water proof (BWP) marine plywood intended for boat building, humid coastal structural applications, and heavy duty wood structures.",
+    "normative_references": ["IS 1734", "IS 848", "IS 707"],
+    "certification_required": "BIS Product Certification (ISI Mark)",
+    "source_url": "https://www.bis.gov.in/know-your-standard/",
+    "technical_parameters": [
+      {"parameter": "Boiling Water Proof Test (72 Hours Boiling)", "prescribed_limit_range": "Pass (72 hrs continuous boiling without delamination)", "unit": "Hours", "safety_significance": "Severe weather marine grade resin bond testing"},
+      {"parameter": "Mycological Resistance (Fungal Attack)", "prescribed_limit_range": "100% Resistant", "unit": "Bio Test", "safety_significance": "Prevents rot in marine submerged conditions"},
+      {"parameter": "Preservative Retention (Copper-Chrome-Arsenic / Boron)", "prescribed_limit_range": "Min 12.0", "unit": "kg/m³", "safety_significance": "Deep chemical impregnation against wood borers and termites"}
+    ]
+  },
+  {
+    "is_number": "IS 13252",
+    "title": "Information Technology Equipment - Safety - Part 1: General Requirements",
+    "sector": "Electronics & IT",
+    "year": "2010",
+    "status": "active",
+    "latest_amendment": "Amd 3 (2022)",
+    "description": "Applies to mains-powered or battery-powered information technology equipment, including computer terminals, servers, printers, routers, power adapters, laptops, and mobile chargers.",
+    "normative_references": ["IS 616", "IS 15885", "IS 16046"],
+    "certification_required": "Compulsory Registration Scheme (CRS) under BIS CRO Order - Mandatory for sales & government procurement",
+    "source_url": "https://www.bis.gov.in/know-your-standard/",
+    "technical_parameters": [
+      {"parameter": "Electric Dielectric Strength (Reinforced Insulation)", "prescribed_limit_range": "3000", "unit": "V AC for 60 sec", "safety_significance": "High voltage isolation safety test for power adapters"},
+      {"parameter": "Earth Leakage Current (Class II Equipment)", "prescribed_limit_range": "Max 0.25", "unit": "mA", "safety_significance": "Prevents shock hazard to user handling metal chassis"},
+      {"parameter": "Transformer Winding Temp Rise (Class B Insulation)", "prescribed_limit_range": "Max 75", "unit": "K (Kelvin Rise)", "safety_significance": "Prevents thermal runaway and internal short-circuits"},
+      {"parameter": "Flammability Rating of Enclosure Plastic", "prescribed_limit_range": "V-0 or V-1 per IS 11000 / UL 94", "unit": "Flammability Class", "safety_significance": "Self-extinguishing plastic casing under internal arc fault"}
+    ]
+  },
+  {
+    "is_number": "IS 16046",
+    "title": "Secondary Cells and Batteries Containing Alkaline or Other Non-Acid Electrolytes - Safety Requirements for Portable Sealed Secondary Cells (Lithium & Nickel)",
+    "sector": "Electronics & Energy Storage",
+    "year": "2018",
+    "status": "active",
+    "latest_amendment": "Amd 1 (2021)",
+    "description": "Specifies tests and safety requirements for portable secondary lithium cells, power bank batteries, EV battery packs, laptop batteries.",
+    "normative_references": ["IS 13252", "IS 616"],
+    "certification_required": "BIS Compulsory Registration Scheme (CRS)",
+    "source_url": "https://www.bis.gov.in/know-your-standard/",
+    "technical_parameters": [
+      {"parameter": "External Short Circuit Test at 55°C", "prescribed_limit_range": "No fire, No explosion (Resistance < 5mΩ)", "unit": "Safety Test", "safety_significance": "Prevents thermal explosion under short circuit fault"},
+      {"parameter": "Overcharge Test (2x Normal Current)", "prescribed_limit_range": "No fire, No explosion for 7 days", "unit": "Overcharge Stress", "safety_significance": "Protection against charger failure overcharging battery"},
+      {"parameter": "Thermal Abuse Test at 130°C", "prescribed_limit_range": "10 minutes exposure without fire", "unit": "Minutes", "safety_significance": "Cell separator integrity at extreme temperatures"}
+    ]
+  },
+  {
+    "is_number": "IS 616",
+    "title": "Audio, Video and Similar Electronic Apparatus - Safety Requirements",
+    "sector": "Electronics & Consumer Goods",
+    "year": "2017",
+    "status": "active",
+    "latest_amendment": "Amd 2 (2023)",
+    "description": "Applies to electronic apparatus designed to be fed from mains or supply apparatus, for television sets, amplifiers, projectors, display screens.",
+    "normative_references": ["IS 13252"],
+    "certification_required": "BIS Compulsory Registration Scheme (CRS)",
+    "source_url": "https://www.bis.gov.in/know-your-standard/",
+    "technical_parameters": [
+      {"parameter": "Mains Overvoltage Surge Withstand", "prescribed_limit_range": "2.5", "unit": "kV Surge Impulse", "safety_significance": "Protects electronic circuitry against grid voltage spikes"},
+      {"parameter": "Max Touch Current (Normal Conditions)", "prescribed_limit_range": "Max 0.7", "unit": "mA Peak", "safety_significance": "User shock safety threshold"}
+    ]
+  },
+  {
+    "is_number": "IS 2190",
+    "title": "Selection, Installation and Maintenance of First-Aid Fire Extinguishers - Code of Practice",
+    "sector": "Fire Safety & Protection",
+    "year": "2010",
+    "status": "active",
+    "latest_amendment": "Amd 2 (2020)",
+    "description": "Gives recommendations for selection, installation, maintenance, inspection, and testing of portable first-aid fire extinguishers in commercial buildings, public offices, and industrial plants.",
+    "normative_references": ["IS 15683", "IS 2878", "IS 10204"],
+    "certification_required": "Fire Safety Compliance Code of Practice",
+    "source_url": "https://www.bis.gov.in/know-your-standard/",
+    "technical_parameters": [
+      {"parameter": "Max Travel Distance to Extinguisher (Class A hazard)", "prescribed_limit_range": "Max 15", "unit": "Meters", "safety_significance": "Mandatory placement density for occupant emergency access"},
+      {"parameter": "Periodic Hydrostatic Stretch Test Frequency", "prescribed_limit_range": "Once every 3 years (Co2) / 5 years (DCP)", "unit": "Years", "safety_significance": "Cylinder pressure vessel integrity re-certification"}
+    ]
+  },
+  {
+    "is_number": "IS 15683",
+    "title": "Portable Fire Extinguishers - Performance and Construction - Specification",
+    "sector": "Fire Safety & Protection",
+    "year": "2018",
+    "status": "active",
+    "latest_amendment": "Amd 1 (2022)",
+    "description": "Specifies design, construction, mechanical strength, discharge performance, and fire rating requirements for portable fire extinguishers (ABC dry powder, CO2, water, foam).",
+    "normative_references": ["IS 2190", "IS 4905"],
+    "certification_required": "BIS Product Certification (ISI Mark) - Mandatory for government buildings & tenders",
+    "source_url": "https://www.bis.gov.in/know-your-standard/",
+    "technical_parameters": [
+      {"parameter": "Hydrostatic Test Pressure (Pt)", "prescribed_limit_range": "Min 2.5", "unit": "MPa (25 bar)", "safety_significance": "Cylinder shell proof pressure rating"},
+      {"parameter": "Min Burst Pressure (Pb)", "prescribed_limit_range": "Min 5.5", "unit": "MPa (55 bar)", "safety_significance": "Safety margin factor (2.2x test pressure) against explosion"},
+      {"parameter": "Min Discharge Duration (6kg ABC Powder)", "prescribed_limit_range": "Min 13", "unit": "Seconds", "safety_significance": "Ensures sufficient time for fire suppression agent delivery"},
+      {"parameter": "Effective Discharge Throw Distance", "prescribed_limit_range": "Min 4.0", "unit": "Meters", "safety_significance": "Safe stand-off distance for operator"},
+      {"parameter": "Electrical Dielectric Non-Conductivity Test", "prescribed_limit_range": "Safe up to 100,000 V (100 kV) at 1m", "unit": "Volts", "safety_significance": "Prevents shock to operator when fighting electrical equipment fires"}
+    ]
+  },
+  {
+    "is_number": "IS 3055",
+    "title": "Clinical Thermometers - Part 1: Solid Stem Type",
+    "sector": "Medical Devices & Healthcare",
+    "year": "1989",
+    "status": "active",
+    "latest_amendment": "Amd 2 (2019)",
+    "description": "Prescribes requirements for liquid-in-glass clinical thermometers used for measuring human body temperature.",
+    "normative_references": ["IS 13485"],
+    "certification_required": "BIS ISI Mark + CDSCO Medical Device Registration (Class A)",
+    "source_url": "https://www.bis.gov.in/know-your-standard/",
+    "technical_parameters": [
+      {"parameter": "Temperature Scale Range", "prescribed_limit_range": "35.0 to 42.0", "unit": "°C (95°F to 108°F)", "safety_significance": "Clinical body temperature measurement span"},
+      {"parameter": "Maximum Permissible Error (Accuracy)", "prescribed_limit_range": "± 0.1", "unit": "°C", "safety_significance": "Medical diagnostic accuracy threshold"}
+    ]
+  },
+  {
+    "is_number": "IS 13485",
+    "title": "Medical Devices - Quality Management Systems - Requirements for Regulatory Purposes (Equivalent to ISO 13485)",
+    "sector": "Medical Devices & Healthcare",
+    "year": "2016",
+    "status": "active",
+    "latest_amendment": "2021 Reaffirmation",
+    "description": "Specifies requirements for a quality management system where an organization needs to demonstrate its ability to provide medical devices and related services that consistently meet customer and applicable regulatory requirements.",
+    "normative_references": ["IS 3055", "IS 7454"],
+    "certification_required": "CDSCO System Standard",
+    "source_url": "https://www.bis.gov.in/know-your-standard/",
+    "technical_parameters": [
+      {"parameter": "Risk Management Compliance", "prescribed_limit_range": "ISO 14971 Risk Assessment Matrix", "unit": "Standard Framework", "safety_significance": "Mandatory clinical risk evaluation"}
+    ]
+  },
+  {
+    "is_number": "IS 15636",
+    "title": "Automotive Vehicles - Pneumatic Tyres for Passenger Car Vehicles - Specification",
+    "sector": "Automotive & Transport",
+    "year": "2012",
+    "status": "active",
+    "latest_amendment": "Amd 3 (2023)",
+    "description": "Prescribes requirements for new pneumatic tyres for passenger cars, covering dimensions, load ratings, speed symbols, high-speed endurance tests, and bead unseating resistance.",
+    "normative_references": ["IS 14272", "IS 14664"],
+    "certification_required": "BIS Product Certification (ISI Mark) - Mandatory under Pneumatic Tyres Quality Control Order",
+    "source_url": "https://www.bis.gov.in/know-your-standard/",
+    "technical_parameters": [
+      {"parameter": "High-Speed Endurance Test", "prescribed_limit_range": "120 min step-up speed up to max rating", "unit": "Test Duration", "safety_significance": "Prevents high-speed tyre tread separation and blowout"},
+      {"parameter": "Bead Unseating Resistance Force", "prescribed_limit_range": "Min 6800 to 8890", "unit": "N (Newton)", "safety_significance": "Prevents tyre rim pop-off during sharp cornering"}
+    ]
+  },
+  {
+    "is_number": "IS 17000",
+    "title": "Indian Standard Specification for Space Systems and Satellite Subassemblies (IN-SPACe Allied)",
+    "sector": "Space & Defence Industry",
+    "year": "2023",
+    "status": "active",
+    "latest_amendment": "2023 Edition",
+    "description": "Covers mechanical, thermal, optical, and electromagnetic compatibility requirements for small satellite subassemblies, payload enclosures, and aerospace grade components.",
+    "normative_references": ["IS 2062", "IS 13252"],
+    "certification_required": "IN-SPACe / Space Industry Quality Compliance",
+    "source_url": "https://www.inspace.gov.in/",
+    "technical_parameters": [
+      {"parameter": "Thermal Vacuum Outgassing (TML)", "prescribed_limit_range": "Max 1.0%", "unit": "Total Mass Loss", "safety_significance": "Prevents volatile contamination of satellite optical lenses in vacuum"},
+      {"parameter": "Vibration Test (Sine & Random)", "prescribed_limit_range": "20 to 2000 Hz at 14.1 g RMS", "unit": "g Acceleration", "safety_significance": "Withstand rocket launch acoustic vibration stress"}
+    ]
+  }
+]

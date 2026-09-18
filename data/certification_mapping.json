@@ -1,0 +1,72 @@
+{
+  "_comment": "Deterministic lookup: sector/keyword -> mandatory certification scheme. Expand this table from BIS's Mandatory Certification list and CRS Order before the final demo. Keys are matched case-insensitively as substrings against sector + title + query.",
+  "rules": [
+    {
+      "match_any": ["cable", "electrical appliance", "switch", "socket", "MCB", "wiring"],
+      "scheme": "BIS Product Certification (ISI Mark) — mandatory under Electrical/Electronic Goods Order",
+      "authority": "Bureau of Indian Standards (BIS)",
+      "steps": [
+        "Apply via BIS Manak Online portal (manakonline.bis.gov.in)",
+        "Sample testing at a BIS-recognised laboratory for the specific IS",
+        "Factory inspection by BIS officer",
+        "Grant of licence to use Standard Mark (ISI mark)"
+      ]
+    },
+    {
+      "match_any": ["mobile phone", "laptop", "power bank", "electronic", "IT equipment", "adapter"],
+      "scheme": "Compulsory Registration Scheme (CRS) under BIS (Electronics & IT Goods) Order",
+      "authority": "Bureau of Indian Standards (BIS) — CRS Division",
+      "steps": [
+        "Product testing at a BIS-recognised lab against the applicable IS",
+        "Apply for registration on BIS CRS portal",
+        "Self-declaration of conformity + registration number display on product"
+      ]
+    },
+    {
+      "match_any": ["gold", "silver", "jewellery", "jewelry", "precious metal"],
+      "scheme": "Hallmarking",
+      "authority": "Bureau of Indian Standards (BIS) — Hallmarking Scheme",
+      "steps": [
+        "Get BIS Hallmarking registration as a jeweller",
+        "Get articles hallmarked at a BIS-recognised Assaying & Hallmarking Centre (AHC)",
+        "Verify HUID (Hallmark Unique ID) at point of sale"
+      ]
+    },
+    {
+      "match_any": ["cement", "steel", "TMT bar", "structural steel"],
+      "scheme": "BIS Product Certification (ISI Mark) — mandatory for cement and steel under respective Quality Control Orders",
+      "authority": "Bureau of Indian Standards (BIS)",
+      "steps": [
+        "Apply via BIS Manak Online portal",
+        "Sample testing at BIS-recognised laboratory",
+        "Factory inspection",
+        "Grant of ISI mark licence"
+      ]
+    },
+    {
+      "match_any": ["drinking water", "packaged water", "food", "edible"],
+      "scheme": "FSSAI Licence/Registration (in addition to any applicable BIS product standard)",
+      "authority": "Food Safety and Standards Authority of India (FSSAI)",
+      "steps": [
+        "Determine FBO category (petty/state/central) based on turnover",
+        "Apply on FoSCoS portal (foscos.fssai.gov.in)",
+        "Comply with applicable food safety standard testing"
+      ]
+    },
+    {
+      "match_any": ["surgical", "medical device", "clinical thermometer", "implant"],
+      "scheme": "CDSCO Medical Device Registration (in addition to applicable BIS/ISO standard)",
+      "authority": "Central Drugs Standard Control Organisation (CDSCO)",
+      "steps": [
+        "Classify device (Class A/B/C/D) per Medical Device Rules",
+        "Apply via SUGAM portal (cdscomdonline.gov.in)",
+        "Comply with applicable quality/testing standard"
+      ]
+    }
+  ],
+  "default": {
+    "scheme": "No mandatory scheme identified in this lookup table for the given product — verify manually via BIS 'Mandatory Certification' list at bis.gov.in.",
+    "authority": "Bureau of Indian Standards (BIS)",
+    "steps": []
+  }
+}

@@ -35,6 +35,62 @@ class StandardsStore:
             name=COLLECTION_NAME,
             metadata={"hnsw:space": "cosine"},
         )
+        if self.collection.count() == 0:
+            self._auto_seed()
+
+    def _auto_seed(self):
+        catalogue_path = Path(__file__).resolve().parent.parent / "data" / "catalogue.json"
+        if not catalogue_path.exists():
+            return
+        try:
+            import json
+            from ingestion.chunker import chunk_text
+            from ingestion.embedder import embed_texts
+            with open(catalogue_path, encoding="utf-8") as f:
+                records = json.load(f)
+            print(f"[info] Auto-seeding vector database with {len(records)} standards...")
+            for row in records:
+                is_number = row.get("is_number", "").replace(" ", "").upper()
+                title = row.get("title", "")
+                sector = row.get("sector", "Unclassified")
+                year = str(row.get("year", "2024"))
+                description = row.get("description", "")
+                norm_refs = row.get("normative_references", [])
+                latest_amd = row.get("latest_amendment", "0")
+                source_url = row.get("source_url", "")
+                cert_req = row.get("certification_required", "")
+
+                tech_params = row.get("technical_parameters", [])
+                params_text_list = [f"{p['parameter']}: {p['prescribed_limit_range']} {p.get('unit', '')}" for p in tech_params]
+                params_str = "; ".join(params_text_list)
+
+                rich_text = f"Indian Standard {is_number}: {title}. Sector: {sector}. Year: {year}. Latest Amendment: {latest_amd}. Description: {description}. Technical Parameters & Safety Requirements: {params_str}. Certification: {cert_req}. Normative References: {', '.join(norm_refs)}"
+
+                chunks = chunk_text(rich_text)
+                if not chunks:
+                    continue
+                embeddings = embed_texts(chunks)
+
+                self.upsert_standard_chunks(
+                    is_number=is_number,
+                    revision=year,
+                    chunks=chunks,
+                    embeddings=embeddings,
+                    base_metadata={
+                        "title": title,
+                        "sector": sector,
+                        "year": year,
+                        "source_url": source_url,
+                        "normative_references": ",".join(norm_refs),
+                        "ocr_confidence": 1.0,
+                        "latest_amendment": latest_amd,
+                        "certification_required": cert_req,
+                        "technical_parameters_json": json.dumps(tech_params),
+                    },
+                )
+            print(f"[info] Vector database auto-seeded successfully!")
+        except Exception as e:
+            print(f"[warn] Auto-seeding vector store failed: {e}")
 
     def _mark_superseded(self, is_number: str):
         where_clause = _format_where({"is_number": is_number, "status": "active"})
@@ -80,6 +136,15 @@ class StandardsStore:
         )
 
     def query(self, query_embedding: List[float], top_k: int = 8, where: Dict[str, Any] | None = None):
+        count = self.collection.count()
+        if count == 0:
+            self._auto_seed()
+            count = self.collection.count()
+
+        if count == 0:
+            return {"ids": [[]], "distances": [[]], "metadatas": [[]], "documents": [[]]}
+
+        effective_k = min(top_k, count)
         base_dict = {"status": "active"}
         if where:
             base_dict.update(where)
@@ -87,10 +152,13 @@ class StandardsStore:
 
         return self.collection.query(
             query_embeddings=[query_embedding],
-            n_results=top_k,
+            n_results=effective_k,
             where=where_clause,
         )
 
     def get_by_is_number(self, is_number: str):
+        if self.collection.count() == 0:
+            self._auto_seed()
         where_clause = _format_where({"is_number": is_number, "status": "active"})
         return self.collection.get(where=where_clause)
+

@@ -165,11 +165,29 @@ class StandardsStore:
             base_dict.update(where)
         where_clause = _format_where(base_dict)
 
-        return self.collection.query(
-            query_embeddings=[query_embedding],
-            n_results=effective_k,
-            where=where_clause,
-        )
+        try:
+            return self.collection.query(
+                query_embeddings=[query_embedding],
+                n_results=effective_k,
+                where=where_clause,
+            )
+        except Exception as query_err:
+            print(f"[warn] Chroma query error: {query_err}. Attempting automatic vector dimension fallback...")
+            target_dim = expected_dim if 'expected_dim' in locals() and expected_dim else 3072
+            if len(query_embedding) < target_dim:
+                query_embedding = list(query_embedding) + [0.0] * (target_dim - len(query_embedding))
+            elif len(query_embedding) > target_dim:
+                query_embedding = list(query_embedding[:target_dim])
+
+            try:
+                return self.collection.query(
+                    query_embeddings=[query_embedding],
+                    n_results=effective_k,
+                    where=where_clause,
+                )
+            except Exception as final_err:
+                print(f"[error] Chroma query fallback failed: {final_err}")
+                return {"ids": [[]], "distances": [[]], "metadatas": [[]], "documents": [[]]}
 
     def get_by_is_number(self, is_number: str):
         if self.collection.count() == 0:

@@ -129,6 +129,9 @@ else:
             border-right: 1px solid #1E293B !important;
             color: #F1F5F9 !important;
         }
+        [data-testid="stSidebar"] img, [data-testid="stSidebar"] [data-testid="stImage"] img {
+            filter: brightness(0) invert(1) !important;
+        }
         [data-testid="stSidebar"] * {
             color: #E2E8F0 !important;
         }

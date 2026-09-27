@@ -54,35 +54,43 @@ if theme_choice == "Light Mode":
     st.markdown(
         """
         <style>
-        .stApp {
+        .stApp, [data-testid="stAppViewContainer"], [data-testid="stHeader"] {
             background-color: #F8FAFC !important;
             color: #0F172A !important;
         }
+        [data-testid="stSidebar"], [data-testid="stSidebar"] > div {
+            background-color: #FFFFFF !important;
+            border-right: 1px solid #E2E8F0 !important;
+            color: #0F172A !important;
+        }
         .main-title {
-            font-size: 2.0rem;
-            font-weight: 700;
+            font-size: 2.1rem;
+            font-weight: 800;
             color: #1E3A8A !important;
             margin-bottom: 0.2rem;
+            letter-spacing: -0.02em;
         }
         .sub-title {
-            font-size: 1.0rem;
+            font-size: 1.05rem;
             color: #475569 !important;
             margin-bottom: 1.5rem;
         }
         .badge-primary {
-            background-color: #065F46;
-            color: #FFFFFF !important;
-            padding: 4px 10px;
-            border-radius: 4px;
+            background-color: #D1FAE5 !important;
+            color: #065F46 !important;
+            border: 1px solid #10B981 !important;
+            padding: 4px 12px;
+            border-radius: 6px;
             font-weight: 600;
             font-size: 0.85rem;
             display: inline-block;
         }
         .badge-allied {
-            background-color: #1E40AF;
-            color: #FFFFFF !important;
-            padding: 4px 10px;
-            border-radius: 4px;
+            background-color: #DBEAFE !important;
+            color: #1E40AF !important;
+            border: 1px solid #3B82F6 !important;
+            padding: 4px 12px;
+            border-radius: 6px;
             font-weight: 600;
             font-size: 0.85rem;
             display: inline-block;
@@ -92,7 +100,7 @@ if theme_choice == "Light Mode":
             border-left: 4px solid #D97706 !important;
             color: #92400E !important;
             padding: 12px 16px;
-            border-radius: 4px;
+            border-radius: 6px;
             margin-top: 10px;
             margin-bottom: 10px;
             font-size: 0.92rem;
@@ -109,45 +117,172 @@ else:
     st.markdown(
         """
         <style>
-        .stApp {
-            background-color: #0F172A !important;
-            color: #F8FAFC !important;
+        /* Main background & view container */
+        .stApp, [data-testid="stAppViewContainer"], [data-testid="stHeader"] {
+            background-color: #0B0F19 !important;
+            color: #F1F5F9 !important;
         }
+
+        /* Sidebar styling */
+        [data-testid="stSidebar"], [data-testid="stSidebar"] > div {
+            background-color: #111827 !important;
+            border-right: 1px solid #1E293B !important;
+            color: #F1F5F9 !important;
+        }
+        [data-testid="stSidebar"] * {
+            color: #E2E8F0 !important;
+        }
+        [data-testid="stSidebar"] hr {
+            border-color: #334155 !important;
+        }
+
+        /* Headers & Titles */
         .main-title {
-            font-size: 2.0rem;
-            font-weight: 700;
+            font-size: 2.1rem;
+            font-weight: 800;
             color: #60A5FA !important;
             margin-bottom: 0.2rem;
+            letter-spacing: -0.02em;
         }
         .sub-title {
-            font-size: 1.0rem;
+            font-size: 1.05rem;
             color: #94A3B8 !important;
             margin-bottom: 1.5rem;
         }
-        .badge-primary {
-            background-color: #059669;
+
+        /* Typography, Paragraphs & Labels */
+        p, span, label, h1, h2, h3, h4, h5, h6, [data-testid="stMarkdownContainer"] p, [data-testid="stMarkdownContainer"] li {
+            color: #F1F5F9 !important;
+        }
+        [data-testid="stCaptionContainer"], small, caption {
+            color: #94A3B8 !important;
+        }
+
+        /* Textarea, Input, Select, and File Uploader Boxes */
+        textarea, input, 
+        div[data-baseweb="input"], 
+        div[data-baseweb="textarea"], 
+        div[data-baseweb="select"] > div,
+        [data-testid="stFileUploaderDropzone"] {
+            background-color: #1E293B !important;
+            color: #F8FAFC !important;
+            border: 1px solid #334155 !important;
+            border-radius: 8px !important;
+        }
+        textarea::placeholder, input::placeholder {
+            color: #64748B !important;
+        }
+        div[data-baseweb="select"] * {
+            background-color: #1E293B !important;
+            color: #F8FAFC !important;
+        }
+        ul[role="listbox"] {
+            background-color: #1E293B !important;
+            border: 1px solid #334155 !important;
+        }
+        li[role="option"] {
+            background-color: #1E293B !important;
+            color: #F8FAFC !important;
+        }
+        li[role="option"]:hover, li[role="option"][aria-selected="true"] {
+            background-color: #334155 !important;
+            color: #60A5FA !important;
+        }
+
+        /* Buttons (Preset Buttons & Secondary Actions) */
+        button:not([kind="primary"]), 
+        .stButton > button:not([kind="primary"]),
+        [data-testid="baseButton-secondary"] {
+            background-color: #1E293B !important;
+            color: #38BDF8 !important;
+            border: 1px solid #334155 !important;
+            border-radius: 6px !important;
+            font-weight: 600 !important;
+            transition: all 0.2s ease !important;
+        }
+        button:not([kind="primary"]):hover, 
+        .stButton > button:not([kind="primary"]):hover {
+            background-color: #334155 !important;
+            border-color: #38BDF8 !important;
+            color: #7DD3FC !important;
+            box-shadow: 0 4px 12px rgba(56, 189, 248, 0.15) !important;
+        }
+
+        /* Primary Button */
+        button[kind="primary"], .stButton > button[kind="primary"] {
+            background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%) !important;
             color: #FFFFFF !important;
-            padding: 4px 10px;
-            border-radius: 4px;
+            border: none !important;
+            font-weight: 700 !important;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35) !important;
+        }
+
+        /* Containers, Cards & Expanders */
+        [data-testid="stVerticalBlockBorderWrapper"],
+        [data-testid="stExpander"] {
+            background-color: #111827 !important;
+            border: 1px solid #1E293B !important;
+            border-radius: 8px !important;
+            color: #F1F5F9 !important;
+        }
+        [data-testid="stExpander"] summary {
+            color: #60A5FA !important;
+            font-weight: 600 !important;
+        }
+
+        /* Tabs styling */
+        [data-baseweb="tab-list"] {
+            background-color: #111827 !important;
+            border-bottom: 2px solid #1E293B !important;
+            gap: 4px !important;
+        }
+        [data-baseweb="tab"] {
+            color: #94A3B8 !important;
+            font-weight: 600 !important;
+            padding: 10px 16px !important;
+            border-radius: 6px 6px 0 0 !important;
+        }
+        [data-baseweb="tab"][aria-selected="true"] {
+            color: #60A5FA !important;
+            background-color: #1E293B !important;
+            border-bottom: 2px solid #60A5FA !important;
+        }
+
+        /* Metrics */
+        [data-testid="stMetricValue"] {
+            color: #38BDF8 !important;
+        }
+        [data-testid="stMetricLabel"] {
+            color: #94A3B8 !important;
+        }
+
+        /* Badges & Alert boxes */
+        .badge-primary {
+            background-color: #064E3B !important;
+            color: #A7F3D0 !important;
+            border: 1px solid #059669 !important;
+            padding: 4px 12px;
+            border-radius: 6px;
             font-weight: 600;
             font-size: 0.85rem;
             display: inline-block;
         }
         .badge-allied {
-            background-color: #3B82F6;
-            color: #FFFFFF !important;
-            padding: 4px 10px;
-            border-radius: 4px;
+            background-color: #1E3A8A !important;
+            color: #BFDBFE !important;
+            border: 1px solid #2563EB !important;
+            padding: 4px 12px;
+            border-radius: 6px;
             font-weight: 600;
             font-size: 0.85rem;
             display: inline-block;
         }
         .cert-box {
-            background-color: rgba(217, 119, 6, 0.25) !important;
+            background-color: rgba(217, 119, 6, 0.18) !important;
             border-left: 4px solid #F59E0B !important;
             color: #FDE68A !important;
             padding: 12px 16px;
-            border-radius: 4px;
+            border-radius: 6px;
             margin-top: 10px;
             margin-bottom: 10px;
             font-size: 0.92rem;
@@ -155,6 +290,13 @@ else:
         }
         .cert-box b {
             color: #FBBF24 !important;
+        }
+
+        /* Dataframes & Tables */
+        [data-testid="stDataFrame"], div[data-testid="stTable"] {
+            background-color: #111827 !important;
+            border: 1px solid #1E293B !important;
+            border-radius: 8px !important;
         }
         </style>
     """,

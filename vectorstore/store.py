@@ -144,6 +144,21 @@ class StandardsStore:
         if count == 0:
             return {"ids": [[]], "distances": [[]], "metadatas": [[]], "documents": [[]]}
 
+        # Ensure query_embedding matches collection expected dimension
+        try:
+            sample = self.collection.get(limit=1, include=["embeddings"])
+            embeddings = sample.get("embeddings") if sample else None
+            if embeddings is not None and len(embeddings) > 0:
+                expected_dim = len(embeddings[0])
+                if len(query_embedding) != expected_dim:
+                    print(f"[warn] Embedding dimension mismatch: got {len(query_embedding)}, expected {expected_dim}. Adapting vector...")
+                    if len(query_embedding) < expected_dim:
+                        query_embedding = query_embedding + [0.0] * (expected_dim - len(query_embedding))
+                    else:
+                        query_embedding = query_embedding[:expected_dim]
+        except Exception as e:
+            print(f"[warn] Dimension check exception: {e}")
+
         effective_k = min(top_k, count)
         base_dict = {"status": "active"}
         if where:

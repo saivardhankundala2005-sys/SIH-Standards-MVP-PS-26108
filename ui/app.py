@@ -271,6 +271,8 @@ with tab_search:
                 st.markdown("### Technical Procurement Specification Report")
                 with st.spinner("Generating quantitative compliance report..."):
                     report_text = generate_rag_report(processed_query, results, api_key=user_api_key)
+                    if report_text.startswith("*Technical report generation requires") or report_text.startswith("*Could not generate report"):
+                        st.info("💡 **API Key Notice**: Enter your Gemini API Access Key in the sidebar settings to generate full AI-powered technical procurement reports.")
                     st.markdown(report_text)
 
                     st.download_button(

@@ -42,8 +42,11 @@ def _get_api_keys(custom_key: Optional[str] = None) -> List[str]:
     for k in API_KEYS_POOL:
         if k and k.strip() and k.strip() not in keys:
             keys.append(k.strip())
-    if not keys and GOOGLE_API_KEY:
+    if GOOGLE_API_KEY and GOOGLE_API_KEY.strip() and GOOGLE_API_KEY.strip() not in keys:
         keys.append(GOOGLE_API_KEY.strip())
+    env_key = os.getenv("GOOGLE_API_KEY", "")
+    if env_key and env_key.strip() and env_key.strip() not in keys:
+        keys.append(env_key.strip())
     return keys
 
 

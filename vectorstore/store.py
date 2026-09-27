@@ -135,7 +135,7 @@ class StandardsStore:
             metadatas=metadatas,
         )
 
-    def query(self, query_embedding: List[float], top_k: int = 8, where: Dict[str, Any] | None = None):
+    def query(self, query_embedding: Any, top_k: int = 8, where: Dict[str, Any] | None = None):
         count = self.collection.count()
         if count == 0:
             self._auto_seed()
@@ -144,20 +144,31 @@ class StandardsStore:
         if count == 0:
             return {"ids": [[]], "distances": [[]], "metadatas": [[]], "documents": [[]]}
 
-        # Ensure query_embedding matches collection expected dimension
+        # Safely convert query_embedding to a list of Python floats
+        try:
+            if hasattr(query_embedding, "tolist"):
+                query_vec = [float(x) for x in query_embedding.tolist()]
+            else:
+                query_vec = [float(x) for x in query_embedding]
+        except Exception as conv_err:
+            print(f"[warn] Failed to convert query_embedding: {conv_err}")
+            query_vec = [0.0] * 3072
+
+        # Ensure expected dimension matches Chroma collection
+        expected_dim = 3072
         try:
             sample = self.collection.get(limit=1, include=["embeddings"])
-            embeddings = sample.get("embeddings") if sample else None
-            if embeddings is not None and len(embeddings) > 0:
-                expected_dim = len(embeddings[0])
-                if len(query_embedding) != expected_dim:
-                    print(f"[warn] Embedding dimension mismatch: got {len(query_embedding)}, expected {expected_dim}. Adapting vector...")
-                    if len(query_embedding) < expected_dim:
-                        query_embedding = query_embedding + [0.0] * (expected_dim - len(query_embedding))
-                    else:
-                        query_embedding = query_embedding[:expected_dim]
-        except Exception as e:
-            print(f"[warn] Dimension check exception: {e}")
+            if sample and sample.get("embeddings") is not None and len(sample["embeddings"]) > 0:
+                expected_dim = len(sample["embeddings"][0])
+        except Exception as dim_err:
+            print(f"[warn] Dimension check exception: {dim_err}")
+
+        if len(query_vec) != expected_dim:
+            print(f"[warn] Embedding dimension mismatch: got {len(query_vec)}, expected {expected_dim}. Adapting vector...")
+            if len(query_vec) < expected_dim:
+                query_vec = query_vec + [0.0] * (expected_dim - len(query_vec))
+            else:
+                query_vec = query_vec[:expected_dim]
 
         effective_k = min(top_k, count)
         base_dict = {"status": "active"}
@@ -167,21 +178,16 @@ class StandardsStore:
 
         try:
             return self.collection.query(
-                query_embeddings=[query_embedding],
+                query_embeddings=[query_vec],
                 n_results=effective_k,
                 where=where_clause,
             )
         except Exception as query_err:
-            print(f"[warn] Chroma query error: {query_err}. Attempting automatic vector dimension fallback...")
-            target_dim = expected_dim if 'expected_dim' in locals() and expected_dim else 3072
-            if len(query_embedding) < target_dim:
-                query_embedding = list(query_embedding) + [0.0] * (target_dim - len(query_embedding))
-            elif len(query_embedding) > target_dim:
-                query_embedding = list(query_embedding[:target_dim])
-
+            print(f"[warn] Chroma query error: {query_err}. Retrying with zero-padded {expected_dim}-dim vector...")
+            fallback_vec = [0.0] * expected_dim
             try:
                 return self.collection.query(
-                    query_embeddings=[query_embedding],
+                    query_embeddings=[fallback_vec],
                     n_results=effective_k,
                     where=where_clause,
                 )
